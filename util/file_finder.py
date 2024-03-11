@@ -1,16 +1,14 @@
 import os
 from os.path import join, getsize
-import colorama
-from colorama import Back, Fore, Style
+
 
 def find_something():
     
     tasklist = []
-    colorama.init(autoreset = True)
 
-    rootfolder = input(Fore.CYAN + "folder path: ")
+    rootfolder = input("folder path: ")
     
-    print(Fore.GREEN + " Scanning... ")
+    print(" Scanning... ")
 
     for root, dirs, files in os.walk(rootfolder):
         
@@ -28,5 +26,5 @@ def find_something():
                     })
     print(tasklist)
         
-    print(Fore.GREEN + " [ OK ] ")
+    print(" [ OK ] ")
     return tasklist

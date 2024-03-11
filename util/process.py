@@ -1,7 +1,5 @@
 import os
 from os.path import join, getsize
-import colorama
-from colorama import Back, Fore, Style
 from exif import Image
 
 UBICATION = [(51, 23, 21.3612),(30, 5, 56.4108)] #new location to overwrite, leave '0' if u want to delete
@@ -9,11 +7,11 @@ LATITUDE_REF = "N"
 LONGITUDE_REF = "E"
 
 def process(tasklist):
-    colorama.init(autoreset = True)
+    
     print(UBICATION)
     for task in tasklist:
         
-        print( Fore.MAGENTA + "Cleaning... " + task['name'])
+        print("Cleaning... " + task['name'])
         
         try:
             with open(task['path'], 'rb') as f:
